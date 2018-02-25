@@ -1,0 +1,154 @@
+* {
+  color: #333;
+}
+
+.container-fluid {
+  opacity: 0.8;
+  background-color: white;
+  color: white;
+  font-size: 40px;
+}
+
+.input-group {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rounded-circle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+
+#circle1content {
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+#food {
+  color: white;
+  font-family: Arial;
+}
+
+#circle2content {
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+#circle3content {
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+#space {
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#cityNameStyle {
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+.center {
+  text-align: center;
+}
+
+.label2 {
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.label1 {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.background-wrap {
+  position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+  opacity: 0.6;
+  background-size: cover;
+}
+
+.fixed-bottom {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.img-rounded {
+  width: 100%;
+  height: 30%;
+}
+
+input[type=text] {
+    border: 2px solid grey;
+    border-radius: 4px;
+}
+
+input[type=number] {
+    width: 100%
+}
+
+#results {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid gray;
+    box-shadow: .5vw .5vw 1vw #888888;
+    overflow: hidden;
+    display: none;
+    z-index: 2
+}
+
+#results img {
+    width: 100%;
+    height: 100%;
+}
+
+#results:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    background: white;
+    color: red;
+    width: 20px;
+    height: 20px;
+    content: "X";
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-left: 2px solid gray;
+    border-bottom: 2px solid gray
+}
+
+@media screen and (min-width: 576px) {
+    #results {
+        top: 100px;
+        left: 50%;
+        margin-left: -200px;
+        width: 400px;
+        height: 400px
+    }
+    #results img {
+        height: 400px
+    }
+}

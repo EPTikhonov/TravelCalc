@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- jQuery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- My Own CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- My Own JS -->
+  <script type="text/javascript" src="travelcalculator.js"></script>
+  <title>TravelCalc -Find The Right Choice</title>
+</head>
+
+<body>
+  <!-- Video Background -->
+  <div class="background-wrap">
+    <video id="video-bg-elem" preload="auto" autoplay loop="loop" muted="muted">
+				<source src="assets/traveling.mp4" type="video/mp4">
+			</video>
+  </div>
+  <!-- Header -->
+  <div class="container-fluid">
+    <div class="header">
+      <span class="fa fa-calculator"> TravelCalc
+      </span>
+    </div>
+  </div>
+  <br>
+
+  <!-- Sections -->
+  <div class="container">
+    <form id="travel_calculator_form" name="travel_calculator_form" method="post">
+    <div id="travel_calculator" class="row">
+
+      <!-- First Section -->
+      <div class="col-lg-4 col-md-4 col-xs-12" style="text-align: center">
+        <img class="img-rounded" alt="" src="assets/car.jpg" width="140" height="140">
+        <br>
+        <br>
+        <div id="circle2content">
+          <br>
+          <label>Drive</label>
+          <div id="car_related_costs" class="label1">
+            <label for="miles_driving">Distance</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-road" ></i></span>
+            <input name="maximum_daily_miles" type="hidden" id="maximum_daily_miles" value="560">
+            <input name="wear_per_mile" type="hidden" id="wear_per_mile" value="0.05">
+            <input class="form-control" name="miles_driving" type="number" id="miles_driving" max="3500" min="100" step="50" value="500">
+          </div>
+          <div class="label1">
+            <label for="average_miles_per_gallon">MPG</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-tint" ></i></span>
+            <input class="form-control" name="average_miles_per_gallon" type="number" id="average_miles_per_gallon" max="100" min="10" step="1" value="23">
+          </div>
+          <div class="label1">
+            <label for="cost_per_gallon">PPG</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-usd" ></i></span>
+            <input class="form-control" name="cost_per_gallon" type="number" id="cost_per_gallon" max="99" min="0.10" step="0.10" value="2.20">
+          </div>
+          <div class="label1">
+            <label for="hotel_cost_per_night">Hotel</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-hotel" ></i></span>
+            <input class="form-control" name="hotel_cost_per_night" type="number" id="hotel_cost_per_night" max="400" min="40" step="10" value="150">
+          </div>
+          <div class="label1">
+            <label for="car_discount">Discount</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-usd" ></i></span>
+            <input class="form-control" name="car_discount" type="number" id="car_discount" max="1000" min="0" step="10" value="100">
+          </div>
+          <div class="label1">
+            <label for="parking_cost_per_day">Parking</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-car" ></i></span>
+            <input class="form-control" name="parking_cost_per_day" type="number" id="parking_cost_per_day" max="200" min="0" step="5" value="50">
+          </div>
+          <br>
+        </div>
+      </div>
+      
+      <!-- First Section -->
+      <div class="col-lg-4 col-md-4 col-xs-12" style="text-align: center">
+        <img class="img-rounded" alt="" src="assets/common.jpeg" width="140" height="140">
+        <br>
+        <br>
+        <div id="circle1content">
+          <br>
+          <label>Common</label>
+          <div id="common_costs" class="label1">
+            <label for="pay_rate">Pay Rate</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-usd" ></i></span>
+            <input class="form-control" name="pay_rate" type="number" id="pay_rate" max="80" min="8" step="1" value="15">
+          </div>
+          <div class="label1">
+            <label for="travelers">Travelers</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user" ></i></span>
+            <input class="form-control" name="travelers" type="number" id="travelers" max="5" min="1" step="1" value="1">
+          </div>
+          <div class="label1">
+            <label>Food</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-apple" ></i></span>
+            <select class="custom-select" size="4" style="width: 100%;" multiple>
+                <option id="food_cost_0" name="food_cost" value="0">Packed</option>
+                <option id="food_cost_1" name="food_cost" value="10" selected>Fast $10.00</option>
+                <option id="food_cost_2" name="food_cost" value="20">Tourist $20.00</option>
+                <option id="food_cost_3" name="food_cost" value="30">Fancy $30.00</option>
+              </select>
+          </div>
+          <div class="label1">
+            <label for="audio_users">Audio Stream</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-headphones" ></i></span>
+            <input name="audio_rate" type="hidden" id="audio_rate" value="0.1">
+            <input class="form-control" name="audio_users" type="number" id="audio_users" max="5" min="0" step="1" value="1">
+          </div>
+          <div class="label1">
+            <label for="video_users">Video Stream</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-video-camera" ></i></span>
+            <input name="video_rate" type="hidden" id="video_rate" value="0.5">
+            <input class="form-control" name="video_users" type="number" id="video_users" max="4" min="0" step="1" value="0">
+          </div>
+          <div class="label1">
+            <label for="plan_data">Monthly Data Cap</label>
+          </div>
+          <div class="input-group">
+            <input class="form-control" name="plan_data" type="number" id="plan_data" max="50" min="0" step="1" value="10">
+            <span class="input-group-addon" style="color: black;">
+            GB
+            </span>
+          </div>
+          <div class="label1">
+            <label>Overage Fee</label>
+          </div>
+          <div class="input-group">
+            <select class="custom-select" size="5" style="width: 100%;" multiple>
+                <option name="plan_overage" value="0" id="overage_rate_0">Free</option>
+                <option id="5gb" value="5">$5/GB</option>
+                <option name="plan_overage" value="5" id="overage_rate_1" selected>$10/GB</option>
+                <option name="plan_overage" value="15" id="overage_rate_3">$15/GB</option>
+                <option name="plan_overage" value="20" id="overage_rate_4">$20/GB</option>
+              </select>
+          </div>
+
+          <br>
+        </div>
+        <br>
+        <br>
+      </div>
+
+      <!-- Third Section -->
+      <div class="col-lg-4 col-md-4 col-xs-12" style="text-align: center">
+        <img class="img-rounded" alt="" src="assets/plane.jpeg" width="140" height="140">
+        <br>
+        <br>
+        <div id="circle3content">
+          <br>
+          <label>Fly</label>
+          <div id="flight_related_costs" class="label1">
+            <label for="miles_flying">Distance</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-plane" ></i></span>
+            <input name="flight_speed" type="hidden" id="flight_speed" value="575">
+            <input name="airport_hours" type="hidden" id="airport_hours" value="2.5">
+            <input class="form-control" name="miles_flying" type="number" id="miles_flying" max="3500" min="100" step="50" value="500">
+          </div>
+          <div class="label1">
+            <label for="flight_cost">Ticket</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-usd" ></i></span>
+            <input class="form-control" name="flight_cost" type="number" id="flight_cost" max="3000" min="50" step="50" value="500">
+          </div>
+          <div class="label1">
+            <label for="checked_bags_per_traveler">Bags</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-shopping-bag" ></i></span>
+            <input name="cost_per_bag" type="hidden" id="cost_per_bag" value="50">
+            <input class="form-control" name="checked_bags_per_traveler" type="number" id="checked_bags_per_traveler" max="2" min="0" value="1">
+          </div>
+          <div class="label1">
+            <label for="flight_transit_cost">Transit</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-taxi" ></i></span>
+            <input class="form-control" name="flight_transit_cost" type="number" id="flight_transit_cost" max="1000" min="0" step="10" value="100">
+          </div>
+          <div class="label1">
+            <label for="flight_discount">Discount</label>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-usd" ></i></span>
+            <input class="form-control" name="flight_discount" type="number" id="flight_discount" max="1000" min="0" step="10" value="100">
+          </div>
+
+          <div>
+            <br>
+            <label class="label2">@Airport</label>
+            <br>
+            <div class="checkbox-inline">
+              <label>
+                <input type="checkbox" name="flight_amenities" value="10" id="flight_amenities_wifi">
+                <label class="form-check-label">Wi-Fi $10</label>
+            </div>
+            <div class="checkbox-inline">
+              <label>
+                <input type="checkbox" name="flight_amenities" value="10" id="flight_amenities_beverage">
+                <label class="form-check-label">Drink $10</label>
+            </div>
+          </div>
+          <br>
+
+          <div>
+            <label class="label2">During Flight</label>
+            <br>
+            <div class="checkbox-inline">
+              <label>
+             <input type="checkbox" name="in_flight_amenities" value="10" id="in_flight_amenities_0">Drink $10</label>
+            </div>
+            <div class="checkbox-inline">
+              <label>
+             <input type="checkbox" name="in_flight_amenities" value="20" id="in_flight_amenities_1">Tunes $10</label>
+            </div>
+            <div class="checkbox-inline">
+              <label>
+             <input type="checkbox" name="in_flight_amenities" value="10" id="in_flight_amenities_2">Wi-Fi $20</label>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Calculate Button (fixed in place) -->
+  <div class="container">
+    <div class="fixed-bottom">
+      <button type="button" class="btn btn-primary btn-block" id="update_button" autofocus>Calculate</button>
+    </div>
+  </div>
+  <div id="results"></div>
+
+  <!-- Weekly Weather -->
+  <div class="container-fluid">
+    <span id="space" class="fa fa-thermometer"> Weather</span>
+    <div id="cityNameStyle" class="container-fluid text-center">
+    <input type="text" class="form-control text-center" placeholder="Ex. London, GB" id="cityName" value="Green Bay, US">
+  </div>
+    <!-- Powered by Darksky -->
+    <div class="container-fluid text-center">
+      <a href="http://openweathermap.org/">
+            <p style="font-size: 10px">Powered by OpenWeatherMap</p>
+          </a>
+    </div>
+
+    <table class="table">
+      <tr>
+        <th></th>
+        <th class="center">Today</th>
+        <th class="center" id="dayOfWeek2"></th>
+        <th class="center"></th>
+        <th class="center"></th>
+        <th class="center"></th>
+        <th class="center"></th>
+        <th class="center"></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td><i class="fa fa-cloud"></i></td>
+        <td><i class="fa fa-sun-o"></i></td>
+        <td><i class="fa fa-cloud"></i></td>
+        <td><i class="fa fa-sun-o"></i></td>
+        <td><i class="fa fa-sun-o"></i></td>
+        <td><i class="fa fa-snowflake-o"></i></td>
+        <td><i class="fa fa-sun-o"></i></td>
+      </tr>
+      <tr>
+        <td>High</td>
+        <td id="day_1_high"></td>
+        <td id="day_2_high"></td>
+        <td id="day_3_high"></td>
+        <td id="day_4_high"></td>
+        <td id="day_5_high"></td>
+        <td id="day_6_high"></td>
+        <td id="day_7_high"></td>
+      </tr>
+      <tr>
+        <td>Low</td>
+        <td id="day_1_low"></td>
+        <td id="day_2_low"></td>
+        <td id="day_3_low"></td>
+        <td id="day_4_low"></td>
+        <td id="day_5_low"></td>
+        <td id="day_6_low"></td>
+        <td id="day_7_low"></td>
+      </tr>
+    </table>
+    <!-- use
+      fa fa-sun-o
+      fa fa-cloud
+      fa fa-snowflake-o
+      fa fa-bolt
+      fa fa-tint
+    -->
+  </div>
+
+  <br>
+  <br>
+  <div class="container-fluid footer text-center">
+    <span>Eric Tikhonov &copy; 2018</span>
+  </div>
+  <br>
+  <br>
+</body>
+
+</html>
