@@ -1,3 +1,6 @@
+/*jslint devel: true, browser: true */
+/*global $*/
+
 $(function () {
     "use strict";
 
@@ -165,7 +168,7 @@ $(function () {
                           weekDay = "Mon";
                           break;
                     case 2:
-                          weekDay = "Tues";
+                          weekDay = "Tue";
                           break;
                     case 3:
                           weekDay = "Wed";
