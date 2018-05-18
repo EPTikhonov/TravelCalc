@@ -8,7 +8,7 @@ There are also many comments in the index.html file. Example: "\<!-- NOTE: This 
 
 Check it out at: https://eptikhonov.github.io/TravelCalc/
 
-<a href="#"><img src="https://i.imgflip.com/2aijep.gif" title="TravelCalc"/></a>
+<a href="#"><img src="https://github.com/EPTikhonov/TravelCalc/blob/gh-pages/assets/TravelCalcWeatherDemo.gif" title="TravelCalc"/></a>
 
 ## Built With
 * HTML
