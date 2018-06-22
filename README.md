@@ -19,7 +19,6 @@ Check it out at: https://eptikhonov.github.io/TravelCalc/
 * CSS
 * JavaScript
 * jQuery
-* Ajax
 * Bootstrap
 
 ## License & Copyright
