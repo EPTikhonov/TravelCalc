@@ -8,11 +8,11 @@ Calculates travel expenses between driving or flying and displays a 5 day weathe
     
 In the TravelCalculator.js file on line 11, a comment states to plug in your own API key from http://api.openweathermap.org . This is needed to get real weather data for the weather feature.
 
-There are also many comments in the index.html file. Example: "\<!-- NOTE: This is default for Github -->"\. These default values need to be removed before searching for a location's weather forcast.
+There are also many comments in the index.html file. Example: "\<!-- NOTE: This is default for Github Pages -->"\. These default values need to be removed before searching for a location's weather forcast.
 
 Check it out at: https://eptikhonov.github.io/TravelCalc/
 
-<a href="#"><img src="https://github.com/EPTikhonov/TravelCalc/blob/gh-pages/assets/TravelCalcWeatherDemo.gif" title="TravelCalc"/></a>
+<a href="#"><img src="https://github.com/EPTikhonov/TravelCalc/blob/gh-pages/assets/TravelCalcDemo.gif" title="TravelCalc"/></a>
 
 ## Built With
 * HTML
