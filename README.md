@@ -1,5 +1,5 @@
 # TravelCalc - The Right Way Is Your Way!
-Calculates travel expenses between driving or flying and displays a 5 day weather forcast using OpenWeatherMap API.
+Calculates travel expenses between driving or flying and displays a 5 day weather forecast using OpenWeatherMap API and JavaScript.
 ---
 ## Running the code
     
